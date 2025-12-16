@@ -1,0 +1,563 @@
+/* --- 1. Variables & Reset (Modern Dark Theme) --- */
+:root {
+      --primary-color: #f44336; /* Bright Red/Orange for action and accent */
+    --secondary-color: #ffcc80; /* Light Orange for highlights/taglines */
+    --dark-bg: #1f1f1f; /* Primary background color */
+    --light-bg: #2c2c2c; /* Secondary section background */
+    --text-color-light: #f5f5f5; /* Light text for dark background */
+    --text-color-muted: #aaaaaa; /* Muted text */
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Lato', sans-serif;
+    --border-radius: 6px;
+
+    /* ... (Variables remain the same) ... */
+}
+
+/* ... (Reset and Body rules remain the same) ... */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-color-light);
+    background-color: var(--dark-bg);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- 2. Typography & Headings --- */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--text-color-light);
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+}
+
+h2 { font-size: 3.5rem; }
+h3 { font-size: 2.5rem; }
+
+/* --- 3. Header & Navigation --- */
+header {
+    background-color: var(--dark-bg);
+    border-bottom: 1px solid var(--light-bg);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 🏆 CRITICAL NEW RULE TO ALIGN LINKS AND BUTTON */
+nav {
+    display: flex; 
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    /* We will remove this line since it's redundant/unnecessary once NAV is flex */
+    /* margin-right: 20px; */ 
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color-light);
+    padding: 10px 15px;
+    transition: color 0.3s;
+    font-weight: 400;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.order-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 700;
+    transition: opacity 0.3s;
+    /* Set margin to create space between the last link and the button */
+    margin-left: 15px; 
+    /* Removed the previous problematic display: flex; and display: inline-block; */
+}
+
+.order-btn:hover {
+    opacity: 0.8;
+}
+
+.menu-toggle {
+ 
+    background: none;
+    border: 1px solid var(--text-color-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-color-light);
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+}
+
+/* --- 4. Hero Section --- */
+.hero-section {
+    /* [CURRENT RULE - No change needed here, as it's already set up for one image] */
+    background: linear-gradient(rgba(31, 31, 31, 0.7), rgba(31, 31, 31, 0.7)), url('assets/Background.jpg') no-repeat center center/cover;
+    /* ... (rest of .hero-section rules) ... */
+}
+
+.tagline {
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    text-transform: none;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    margin-bottom: 25px;
+}
+/* --- OPTIONAL: Secondary Hero Background Option (Example Class) --- */
+.hero-section.hero-option-2 {
+    background: linear-gradient(rgba(31, 31, 31, 0.7), rgba(31, 31, 31, 0.7)), url('assets/wood-oven-bg.jpg') no-repeat center center/cover;
+    /* Add 'hero-option-2' class to HTML for this effect */
+}
+
+
+/* --- NEW: Specials Section Background Option --- */
+/* Assuming you have an ID #specials for a dedicated section */
+#specials {
+    /* Uses the dark background color by default, but provides an image option */
+    background-color: var(--dark-bg);
+    padding: 100px 0;
+    text-align: center;
+}
+
+#specials.image-bg {
+    /* Use the light-bg variable color for a subtle red tint overlay */
+    background: linear-gradient(rgba(44, 44, 44, 0.8), rgba(44, 44, 44, 0.8)), url('assets/pizza-peel-bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Optional: Parallax effect */
+    color: var(--text-color-light);
+}
+
+/* --- 5. Buttons & CTAs --- */
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+/* --- 6. Menu Section --- */
+.menu-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--light-bg);
+}
+
+.menu-filters {
+    margin: 40px 0;
+}
+
+.filter-btn {
+    background-color: var(--dark-bg);
+    border: 1px solid var(--text-color-muted);
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.menu-item {
+    background-color: var(--dark-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--light-bg);
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(244, 67, 54, 0.2);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-item h4 {
+    margin-top: 20px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+}
+
+.menu-item .description {
+    font-size: 0.95rem;
+    color: var(--text-color-muted);
+    padding: 0 20px;
+}
+
+.menu-item .price {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin: 15px 0;
+    padding: 0 20px;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* --- 7. Location Section --- */
+.location-section {
+    /* [CURRENT RULE] */
+    background-color: var(--dark-bg);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.location-section h3 {
+    color: var(--primary-color);
+}
+
+.map-placeholder {
+    height: 350px;
+    background-color: #212121;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: var(--text-color-muted);
+}
+
+/* --- NEW: Location Background Option --- */
+.location-section.image-bg {
+    /* Use a darker overlay for this section */
+    background: linear-gradient(rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.9)), url('assets/restaurant-interior-bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+/* --- 8. Footer --- */
+footer {
+    background-color: #111111;
+    color: var(--text-color-muted);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 3px solid var(--primary-color);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- 9. Media Queries (Responsiveness) --- */
+@media (max-width: 768px) {
+    /* Show mobile menu when active */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        background-color: var(--dark-bg);
+        border-top: 1px solid var(--light-bg);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .order-btn {
+        display: none; 
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+}
+/* =====================================
+   7. Testimonials/Reviews Section
+   ===================================== */
+
+.testimonials-section {
+    /* Background now uses the secondary dark background */
+    background-color: var(--light-bg); 
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonials-section h3 {
+    margin-bottom: 40px;
+    font-family: var(--font-heading); 
+    font-size: 2.2em;
+    /* Headings are light */
+    color: var(--text-color-light); 
+}
+
+.review-card {
+    /* Card background is the darker primary background */
+    background-color: var(--dark-bg);
+    border: 1px solid #3a3a3a; /* Dark border */
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin: 20px auto; 
+    max-width: 700px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Stronger shadow for contrast */
+    position: relative;
+    font-style: italic; 
+}
+
+.review-card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    /* Text is muted light color */
+    color: var(--text-color-muted); 
+    margin-bottom: 15px;
+}
+
+.review-card .customer-name {
+    font-style: normal; 
+    font-weight: bold;
+    /* Name is the bright accent color */
+    color: var(--primary-color); 
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+/* Quote icon adjusted for dark mode */
+.review-card::before {
+    content: "“"; 
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4em;
+    /* Lighter color for visibility on dark background */
+    color: #444; 
+    opacity: 0.7;
+    line-height: 1;
+}
+
+/* Flexbox for multiple cards (remains the same) */
+.testimonials-section .container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .testimonials-section .container {
+        display: block; 
+    }
+}
+
+
+/* =====================================
+   8. Contact & Hours Section
+   ===================================== */
+
+.contact-section {
+    padding: 60px 0;
+    /* Main section background is the secondary dark background */
+    background-color: var(--light-bg); 
+}
+
+.contact-section h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: var(--font-heading);
+    font-size: 2.2em;
+    /* Headings are light */
+    color: var(--text-color-light); 
+}
+
+/* Container for Hours and Form - Use CSS Grid for side-by-side layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px; 
+    align-items: start; 
+}
+
+/* --- Hours of Operation Styling --- */
+.hours h4 {
+    /* Accent color for hours header */
+    color: var(--primary-color); 
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.hours ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.hours li {
+    /* List item background is a lighter dark shade */
+    background-color: #383838; 
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: var(--border-radius);
+    font-size: 1.1em;
+    /* Text is light */
+    color: var(--text-color-light); 
+}
+
+/* --- Contact Form Styling --- */
+.contact-form-container h4 {
+    color: var(--text-color-light);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    /* Input background is dark, text is light */
+    background-color: var(--dark-bg);
+    border: 1px solid #444; 
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    font-family: var(--font-body);
+    color: var(--text-color-light); /* Input text color */
+    box-sizing: border-box; 
+}
+
+/* Placeholder text color adjustment for dark mode */
+.contact-form-container input::placeholder,
+.contact-form-container textarea::placeholder {
+    color: var(--text-color-muted);
+    opacity: 1; /* For cross-browser compatibility */
+}
+
+.contact-form-container textarea {
+    resize: vertical; 
+    min-height: 120px;
+}
+
+/* Button styling relies on the global .btn-primary */
+.contact-form-container .btn-primary {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* --- Mobile Responsiveness (Stack columns) --- */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hours {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        /* Darker dashed line for separation */
+        border-bottom: 1px dashed #444; 
+    }
+}

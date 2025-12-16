@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Pro - Best Wood-Fired Pizza in Town</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Crust & Crumb</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#specials">Specials</a></li>
+                    <li><a href="#location">Find Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="order-btn" id="header-order-btn">Order Now</button>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="tagline">Authentic Neapolitan Tradition</p>
+                    <h2>Fresh Ingredients, Wood-Fired Taste.</h2>
+                    <p>Try our signature Margherita pizza, made with San Marzano tomatoes and fresh basil. **20% Off Your First Order!**</p>
+                    <button class="btn btn-primary btn-cta" data-item="special-margherita">Order Now & Save</button>
+                </div>
+                </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+    <div class="container">
+        <h3>Our Full Menu</h3>
+        
+        <div class="menu-filters">
+            <button class="filter-btn active" data-category="all">All Items</button>
+            <button class="filter-btn" data-category="pizza">Pizzas</button>
+            <button class="filter-btn" data-category="pasta">Pastas</button>
+            <button class="filter-btn" data-category="salads">Salads</button>
+            <button class="filter-btn" data-category="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid">
+            
+            <div class="menu-item pizza" data-name="margherita">
+                <img src="assets/Margherita Classic.jpg" alt="Margherita Pizza">
+                <h4>1. Margherita Classic</h4>
+                <p class="description">Tomato sauce, fresh mozzarella, basil, olive oil.</p>
+                <p class="price">$14.99</p>
+                <button class="add-to-cart-btn" data-item="Margherita">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="pepperoni">
+                <img src="assets/Spicy Pepperoni.jpg" alt="Pepperoni Pizza">
+                <h4>2. Spicy Pepperoni</h4>
+                <p class="description">Spicy pepperoni, mozzarella, chili flakes.</p>
+                <p class="price">$16.50</p>
+                <button class="add-to-cart-btn" data-item="Pepperoni">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item pizza" data-name="four-cheese">
+                <img src="assets/Four Cheese Heaven.jpg" alt="Four Cheese Pizza">
+                <h4>3. Four Cheese Heaven</h4>
+                <p class="description">Mozzarella, gorgonzola, parmesan, and ricotta with garlic oil.</p>
+                <p class="price">$15.99</p>
+                <button class="add-to-cart-btn" data-item="Four Cheese">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="veggie-delight">
+                <img src="assets/Veggie Delight.jpg" alt="Vegetarian Pizza">
+                <h4>4. Veggie Delight</h4>
+                <p class="description">Seasonal roasted vegetables, olives, and goat cheese.</p>
+                <p class="price">$14.99</p>
+                <button class="add-to-cart-btn" data-item="Veggie Delight">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="prosciutto-arugula">
+                <img src="assets/Prosciutto & Arugula.jpg" alt="Prosciutto Arugula Pizza">
+                <h4>5. Prosciutto & Arugula</h4>
+                <p class="description">Prosciutto di Parma, fresh arugula, parmesan shavings.</p>
+                <p class="price">$18.99</p>
+                <button class="add-to-cart-btn" data-item="Prosciutto Arugula">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item pizza" data-name="meat-lovers">
+                <img src="assets/The Carnivore.jpg" alt="Meat Lovers Pizza">
+                <h4>6. The Carnivore</h4>
+                <p class="description">Sausage, bacon, ham, pepperoni, and extra mozzarella.</p>
+                <p class="price">$19.99</p>
+                <button class="add-to-cart-btn" data-item="The Carnivore">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item pizza" data-name="bbq-chicken">
+                <img src="assets/BBQ Chicken.jpg" alt="BBQ Chicken Pizza">
+                <h4>7. BBQ Chicken</h4>
+                <p class="description">Tangy BBQ sauce base, grilled chicken, red onions, and cilantro.</p>
+                <p class="price">$17.50</p>
+                <button class="add-to-cart-btn" data-item="BBQ Chicken">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="truffle-mushroom">
+                <img src="assets/Truffle Mushroom.jpg" alt="Truffle Mushroom Pizza">
+                <h4>8. Truffle Mushroom</h4>
+                <p class="description">White sauce base, exotic mushrooms, ricotta, and truffle oil.</p>
+                <p class="price">$22.99</p>
+                <button class="add-to-cart-btn" data-item="Truffle Mushroom">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="calabrese">
+                <img src="assets/Calabrese.jpg" alt="Calabrese Pizza">
+                <h4>9. Calabrese</h4>
+                <p class="description">Spicy Italian sausage, peppers, onions, and provolone cheese.</p>
+                <p class="price">$17.99</p>
+                <button class="add-to-cart-btn" data-item="Calabrese">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="hawaiian">
+                <img src="assets/Hawaiian Classic.jpg" alt="Hawaiian Pizza">
+                <h4>10. Hawaiian Classic</h4>
+                <p class="description">Pineapple, cooked ham, tomato sauce, and mozzarella.</p>
+                <p class="price">$15.50</p>
+                <button class="add-to-cart-btn" data-item="Hawaiian">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="pesto-chicken">
+                <img src="assets/Pesto Chicken.jpg" alt="Pesto Chicken Pizza">
+                <h4>11. Pesto Chicken</h4>
+                <p class="description">Basil pesto base, grilled chicken breast, and sun-dried tomatoes.</p>
+                <p class="price">$18.99</p>
+                <button class="add-to-cart-btn" data-item="Pesto Chicken">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="buffalo-chicken">
+                <img src="assets/Buffalo Chicken.jpg" alt="Buffalo Chicken Pizza">
+                <h4>12. Buffalo Chicken</h4>
+                <p class="description">Spicy buffalo sauce, blue cheese crumbles, and marinated chicken.</p>
+                <p class="price">$17.99</p>
+                <button class="add-to-cart-btn" data-item="Buffalo Chicken">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="anchovy-olive">
+                <img src="assets/Anchovy & Olive.jpg" alt="Anchovy Olive Pizza">
+                <h4>13. Anchovy & Olive</h4>
+                <p class="description">Tomato sauce, anchovies, capers, black olives, and oregano.</p>
+                <p class="price">$16.50</p>
+                <button class="add-to-cart-btn" data-item="Anchovy Olive">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="eggplant-parm">
+                <img src="assets/Eggplant Parmigiana.jpg" alt="Eggplant Parm Pizza">
+                <h4>14. Eggplant Parmigiana</h4>
+                <p class="description">Fried eggplant slices, parmesan, and rich marinara sauce.</p>
+                <p class="price">$15.99</p>
+                <button class="add-to-cart-btn" data-item="Eggplant Parm">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pizza" data-name="sicilian">
+                <img src="assets/Sicilian Square.jpg" alt="Sicilian Pizza">
+                <h4>15. Sicilian Square</h4>
+                <p class="description">Thick crust, robust tomato sauce, and aged mozzarella blend.</p>
+                <p class="price">$20.99</p>
+                <button class="add-to-cart-btn" data-item="Sicilian">Add to Cart</button>
+            </div>
+
+
+            <div class="menu-item pasta" data-name="lasagna">
+                <img src="assets/Classic Lasagna.jpg" alt="Lasagna">
+                <h4>1. Classic Lasagna</h4>
+                <p class="description">Layers of beef ragu, creamy bechamel, and fresh pasta.</p>
+                <p class="price">$17.99</p>
+                <button class="add-to-cart-btn" data-item="Lasagna">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item pasta" data-name="carbonara">
+                <img src="assets/Spaghetti Carbonara.jpg" alt="Spaghetti Carbonara">
+                <h4>2. Spaghetti Carbonara</h4>
+                <p class="description">Classic Roman pasta with egg, Pecorino cheese, guanciale, and black pepper.</p>
+                <p class="price">$16.99</p>
+                <button class="add-to-cart-btn" data-item="Carbonara">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pasta" data-name="alfredo">
+                <img src="assets/Fettuccine Alfredo.jpg " alt="Fettuccine Alfredo">
+                <h4>3. Fettuccine Alfredo</h4>
+                <p class="description">Fettuccine pasta tossed in a rich, creamy parmesan sauce.</p>
+                <p class="price">$15.50</p>
+                <button class="add-to-cart-btn" data-item="Alfredo">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pasta" data-name="arrabbiata">
+                <img src="assets/Penne Arrabbiata.jpg" alt="Penne Arrabbiata">
+                <h4>4. Penne Arrabbiata</h4>
+                <p class="description">Penne pasta with a spicy tomato sauce, garlic, and chili flakes.</p>
+                <p class="price">$13.99</p>
+                <button class="add-to-cart-btn" data-item="Arrabbiata">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pasta" data-name="ravioli-pesto">
+                <img src="assets/Spinach & Ricotta Ravioli.jpg" alt="Ravioli Pesto">
+                <h4>5. Spinach & Ricotta Ravioli</h4>
+                <p class="description">Homemade ravioli served with a fresh basil pesto sauce.</p>
+                <p class="price">$18.99</p>
+                <button class="add-to-cart-btn" data-item="Ravioli">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pasta" data-name="gnoochi-tomato">
+                <img src="assets/Potato Gnocchi.jpg" alt="Gnoochi Tomato">
+                <h4>6. Potato Gnocchi</h4>
+                <p class="description">Soft potato dumplings served in a light, fresh San Marzano tomato sauce.</p>
+                <p class="price">$14.99</p>
+                <button class="add-to-cart-btn" data-item="Gnocchi">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pasta" data-name="linguine-clam">
+                <img src="assets/Linguine Vongole.jpg" alt="Linguine Clam">
+                <h4>7. Linguine Vongole</h4>
+                <p class="description">Linguine with fresh clams, white wine, garlic, and parsley.</p>
+                <p class="price">$21.99</p>
+                <button class="add-to-cart-btn" data-item="Vongole">Add to Cart</button>
+            </div>
+
+            <div class="menu-item pasta" data-name="baked-ziti">
+                <img src="assets/Baked Ziti.jpg" alt="Baked Ziti">
+                <h4>8. Baked Ziti</h4>
+                <p class="description">Ziti pasta baked with rich meat sauce, ricotta, and melted mozzarella.</p>
+                <p class="price">$16.50</p>
+                <button class="add-to-cart-btn" data-item="Baked Ziti">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item pasta" data-name="mac-cheese">
+                <img src="assets/Truffle Mac & Cheese.jpg" alt="Mac and Cheese">
+                <h4>9. Truffle Mac & Cheese</h4>
+                <p class="description">Creamy macaroni and cheese elevated with white truffle oil and breadcrumbs.</p>
+                <p class="price">$17.50</p>
+                <button class="add-to-cart-btn" data-item="Mac & Cheese">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item pasta" data-name="cacio-pepe">
+                <img src="assets/Cacio e Pepe.jpg" alt="Cacio e Pepe">
+                <h4>10. Cacio e Pepe</h4>
+                <p class="description">Simple, traditional Roman dish: pasta, Pecorino Romano cheese, and black pepper.</p>
+                <p class="price">$15.99</p>
+                <button class="add-to-cart-btn" data-item="Cacio e Pepe">Add to Cart</button>
+            </div>
+
+            <div class="menu-item salads" data-name="caesar">
+                <img src="assets/Classic Caesar.jpg" alt="Caesar Salad">
+                <h4>1. Classic Caesar</h4>
+                <p class="description">Crisp romaine, parmesan, croutons, and house-made Caesar dressing. Add chicken for $4.</p>
+                <p class="price">$9.99</p>
+                <button class="add-to-cart-btn" data-item="Caesar Salad">Add to Cart</button>
+            </div>
+
+            <div class="menu-item salads" data-name="caprese">
+                <img src="assets/Caprese Salad.jpg" alt="Caprese Salad">
+                <h4>2. Caprese Salad</h4>
+                <p class="description">Fresh mozzarella, ripe tomatoes, basil, and balsamic glaze.</p>
+                <p class="price">$11.50</p>
+                <button class="add-to-cart-btn" data-item="Caprese Salad">Add to Cart</button>
+            </div>
+
+            <div class="menu-item salads" data-name="arugula-parm">
+                <img src="assets/Arugula & Prosciutto.jpg" alt="Arugula Salad">
+                <h4>3. Arugula & Prosciutto</h4>
+                <p class="description">Peppery arugula, thin-sliced prosciutto, shaved parmesan, and lemon vinaigrette.</p>
+                <p class="price">$12.99</p>
+                <button class="add-to-cart-btn" data-item="Arugula Salad">Add to Cart</button>
+            </div>
+
+            <div class="menu-item salads" data-name="house">
+                <img src="assets/Garden House Salad.jpg" alt="House Salad">
+                <h4>4. Garden House Salad</h4>
+                <p class="description">Mixed greens, cucumbers, carrots, bell peppers, and your choice of dressing.</p>
+                <p class="price">$8.99</p>
+                <button class="add-to-cart-btn" data-item="House Salad">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item salads" data-name="italian-chop">
+                <img src="assets/Italian Chop.jpg" alt="Italian Chop Salad">
+                <h4>5. Italian Chop</h4>
+                <p class="description">Chopped lettuce, salami, olives, cherry tomatoes, and provolone in an Italian vinaigrette.</p>
+                <p class="price">$13.99</p>
+                <button class="add-to-cart-btn" data-item="Italian Chop">Add to Cart</button>
+            </div>
+
+
+            <div class="menu-item drinks" data-name="soda">
+                <img src="assets/Craft Soda Selection.jpg" alt="Craft Soda">
+                <h4>1. Craft Soda Selection</h4>
+                <p class="description">Selection of local craft sodas (Cola, Lemon, Root Beer).</p>
+                <p class="price">$3.50</p>
+                <button class="add-to-cart-btn" data-item="Soda">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item drinks" data-name="iced-tea">
+                <img src="assets/Fresh Brewed Iced Tea.jpg" alt="Iced Tea">
+                <h4>2. Fresh Brewed Iced Tea</h4>
+                <p class="description">Unsweetened black tea, freshly brewed daily.</p>
+                <p class="price">$2.99</p>
+                <button class="add-to-cart-btn" data-item="Iced Tea">Add to Cart</button>
+            </div>
+
+            <div class="menu-item drinks" data-name="sparkling-water">
+                <img src="assets/Premium Sparkling Water.jpeg" alt="Sparkling Water">
+                <h4>3. Premium Sparkling Water</h4>
+                <p class="description">Bottled sparkling mineral water.</p>
+                <p class="price">$4.00</p>
+                <button class="add-to-cart-btn" data-item="Sparkling Water">Add to Cart</button>
+            </div>
+
+            <div class="menu-item drinks" data-name="local-beer">
+                <img src="assets/Local Craft Beer.jpg" alt="Local Beer">
+                <h4>4. Local Craft Beer</h4>
+                <p class="description">Rotating selection of local IPAs and lagers (Must be 21+).</p>
+                <p class="price">$6.50</p>
+                <button class="add-to-cart-btn" data-item="Local Beer">Add to Cart</button>
+            </div>
+
+            <div class="menu-item drinks" data-name="espresso">
+                <img src="assets/Double Espresso.jpg" alt="Espresso">
+                <h4>5. Double Espresso</h4>
+                <p class="description">Bold, rich double shot of Italian espresso.</p>
+                <p class="price">$3.00</p>
+                <button class="add-to-cart-btn" data-item="Espresso">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item drinks" data-name="red-wine">
+                <img src="assets/House Red Wine (Glass).jpg" alt="Red Wine">
+                <h4>6. House Red Wine (Glass)</h4>
+                <p class="description">Sangiovese or Chianti selection (Must be 21+).</p>
+                <p class="price">$8.00</p>
+                <button class="add-to-cart-btn" data-item="Red Wine">Add to Cart</button>
+            </div>
+
+            <div class="menu-item drinks" data-name="lemonade">
+                <img src="assets/Fresh Squeezed Lemonade.jpg" alt="Fresh Lemonade">
+                <h4>7. Fresh Squeezed Lemonade</h4>
+                <p class="description">Sweet and tart lemonade made daily.</p>
+                <p class="price">$4.50</p>
+                <button class="add-to-cart-btn" data-item="Lemonade">Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+      <section id="specials" class="image-bg">
+    <div class="container">
+        <h3>Today's 🔥 Wood-Fired Specials</h3>
+        <div class="specials-content">
+            <p>Enjoy our **Signature Prosciutto Calzone** and get a complimentary house drink.</p>
+            <p style="color:var(--secondary-color);">Available this week only!</p>
+            <button class="btn btn-primary btn-cta" data-item="daily-special">View Special Details</button>
+        </div>
+    </div>
+</section>
+
+<section id="reviews" class="testimonials-section">
+    <div class="container">
+        <h3>What Our Customers Say</h3>
+        <div class="review-card">
+            <p>"The best authentic Italian pizza I've had outside of Rome. The dough is divine!"</p>
+            <p class="customer-name">- Sarah M. (5 Stars)</p>
+        </div>
+        </div>
+</section>
+
+
+<section id="location" class="location-section">
+            <div class="container">
+              <h3>Visit Our Shop</h3>
+                <div class="map-placeholder">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-74.0059731!3d40.7127764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25988e0e5a881%3A0x6d90d3d5f30e06e0!2sYour%20Pizza%20Shop%20Name!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p>123 Pizza Lane, Downtown Metropolis | **Open 7 Days a Week**</p>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+       <section id="contact" class="contact-section">
+    <div class="container">
+        <h3>Contact & Opening Hours</h3>
+        <div class="contact-grid">
+            <div class="hours">
+                <h4>Hours of Operation</h4>
+                <ul>
+                    <li>**Mon - Thu:** 11:00 AM - 10:00 PM</li>
+                    <li>**Fri - Sat:** 11:00 AM - 11:00 PM</li>
+                    <li>**Sun:** 12:00 PM - 9:00 PM</li>
+                </ul>
+            </div>
+            <div class="contact-form-container">
+                <h4>Send Us a Message</h4>
+                <form action="/submit-form" method="POST">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message or Catering Inquiry"></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
