@@ -1,19 +1,19 @@
-/* --- 1. Variables & Reset (Modern Dark Theme) --- */
+
 :root {
-      --primary-color: #f44336; /* Bright Red/Orange for action and accent */
-    --secondary-color: #ffcc80; /* Light Orange for highlights/taglines */
-    --dark-bg: #1f1f1f; /* Primary background color */
-    --light-bg: #2c2c2c; /* Secondary section background */
-    --text-color-light: #f5f5f5; /* Light text for dark background */
-    --text-color-muted: #aaaaaa; /* Muted text */
+      --primary-color: #f44336; 
+    --secondary-color: #ffcc80; 
+    --dark-bg: #1f1f1f; /
+    --light-bg: #2c2c2c; 
+    --text-color-light: #f5f5f5; 
+    --text-color-muted: #aaaaaa; 
     --font-heading: 'Oswald', sans-serif;
     --font-body: 'Lato', sans-serif;
     --border-radius: 6px;
 
-    /* ... (Variables remain the same) ... */
+    
 }
 
-/* ... (Reset and Body rules remain the same) ... */
+
 
 * {
     margin: 0;
@@ -34,7 +34,7 @@ body {
     margin: 0 auto;
 }
 
-/* --- 2. Typography & Headings --- */
+
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--text-color-light);
@@ -46,7 +46,7 @@ h1, h2, h3, h4 {
 h2 { font-size: 3.5rem; }
 h3 { font-size: 2.5rem; }
 
-/* --- 3. Header & Navigation --- */
+
 header {
     background-color: var(--dark-bg);
     border-bottom: 1px solid var(--light-bg);
@@ -62,7 +62,7 @@ header .container {
     align-items: center;
 }
 
-/* 🏆 CRITICAL NEW RULE TO ALIGN LINKS AND BUTTON */
+
 nav {
     display: flex; 
     align-items: center;
@@ -76,8 +76,8 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    /* We will remove this line since it's redundant/unnecessary once NAV is flex */
-    /* margin-right: 20px; */ 
+    
+    
 }
 
 .nav-links li a {
@@ -101,9 +101,9 @@ nav {
     cursor: pointer;
     font-weight: 700;
     transition: opacity 0.3s;
-    /* Set margin to create space between the last link and the button */
+   
     margin-left: 15px; 
-    /* Removed the previous problematic display: flex; and display: inline-block; */
+    
 }
 
 .order-btn:hover {
@@ -122,12 +122,11 @@ nav {
     border-radius: var(--border-radius);
 }
 
-/* --- 4. Hero Section --- */
+
 .hero-section {
-    /* [CURRENT RULE - No change needed here, as it's already set up for one image] */
+  
     background: linear-gradient(rgba(31, 31, 31, 0.7), rgba(31, 31, 31, 0.7)), url('assets/Background.jpg') no-repeat center center/cover;
-    /* ... (rest of .hero-section rules) ... */
-}
+    
 
 .tagline {
     color: var(--secondary-color);
@@ -141,30 +140,29 @@ nav {
     font-size: 4rem;
     margin-bottom: 25px;
 }
-/* --- OPTIONAL: Secondary Hero Background Option (Example Class) --- */
+
 .hero-section.hero-option-2 {
     background: linear-gradient(rgba(31, 31, 31, 0.7), rgba(31, 31, 31, 0.7)), url('assets/wood-oven-bg.jpg') no-repeat center center/cover;
-    /* Add 'hero-option-2' class to HTML for this effect */
+    
 }
 
 
-/* --- NEW: Specials Section Background Option --- */
-/* Assuming you have an ID #specials for a dedicated section */
+
 #specials {
-    /* Uses the dark background color by default, but provides an image option */
+   
     background-color: var(--dark-bg);
     padding: 100px 0;
     text-align: center;
 }
 
 #specials.image-bg {
-    /* Use the light-bg variable color for a subtle red tint overlay */
+  
     background: linear-gradient(rgba(44, 44, 44, 0.8), rgba(44, 44, 44, 0.8)), url('assets/pizza-peel-bg.jpg') no-repeat center center/cover;
-    background-attachment: fixed; /* Optional: Parallax effect */
+    background-attachment: fixed; 
     color: var(--text-color-light);
 }
 
-/* --- 5. Buttons & CTAs --- */
+
 .btn {
     display: inline-block;
     padding: 14px 35px;
@@ -188,7 +186,7 @@ nav {
     transform: translateY(-2px);
 }
 
-/* --- 6. Menu Section --- */
+
 .menu-section {
     padding: 100px 0;
     text-align: center;
@@ -282,9 +280,9 @@ nav {
     background-color: #d32f2f;
 }
 
-/* --- 7. Location Section --- */
+
 .location-section {
-    /* [CURRENT RULE] */
+    
     background-color: var(--dark-bg);
     padding: 80px 0;
     text-align: center;
@@ -309,13 +307,13 @@ nav {
     color: var(--text-color-muted);
 }
 
-/* --- NEW: Location Background Option --- */
+
 .location-section.image-bg {
-    /* Use a darker overlay for this section */
+  
     background: linear-gradient(rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.9)), url('assets/restaurant-interior-bg.jpg') no-repeat center center/cover;
     background-attachment: fixed;
 }
-/* --- 8. Footer --- */
+
 footer {
     background-color: #111111;
     color: var(--text-color-muted);
@@ -334,9 +332,8 @@ footer a:hover {
     color: var(--secondary-color);
 }
 
-/* --- 9. Media Queries (Responsiveness) --- */
 @media (max-width: 768px) {
-    /* Show mobile menu when active */
+    
     .nav-links {
         display: none;
         flex-direction: column;
@@ -370,12 +367,10 @@ footer a:hover {
         font-size: 3rem;
     }
 }
-/* =====================================
-   7. Testimonials/Reviews Section
-   ===================================== */
+
 
 .testimonials-section {
-    /* Background now uses the secondary dark background */
+    
     background-color: var(--light-bg); 
     padding: 60px 0;
     text-align: center;
@@ -385,19 +380,19 @@ footer a:hover {
     margin-bottom: 40px;
     font-family: var(--font-heading); 
     font-size: 2.2em;
-    /* Headings are light */
+  
     color: var(--text-color-light); 
 }
 
 .review-card {
-    /* Card background is the darker primary background */
+    
     background-color: var(--dark-bg);
-    border: 1px solid #3a3a3a; /* Dark border */
+    border: 1px solid #3a3a3a; 
     border-radius: var(--border-radius);
     padding: 30px;
     margin: 20px auto; 
     max-width: 700px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Stronger shadow for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
     position: relative;
     font-style: italic; 
 }
@@ -405,7 +400,6 @@ footer a:hover {
 .review-card p {
     font-size: 1.1em;
     line-height: 1.6;
-    /* Text is muted light color */
     color: var(--text-color-muted); 
     margin-bottom: 15px;
 }
@@ -413,26 +407,24 @@ footer a:hover {
 .review-card .customer-name {
     font-style: normal; 
     font-weight: bold;
-    /* Name is the bright accent color */
     color: var(--primary-color); 
     font-size: 1em;
     margin-top: 15px;
 }
 
-/* Quote icon adjusted for dark mode */
+
 .review-card::before {
     content: "“"; 
     position: absolute;
     top: 10px;
     left: 20px;
     font-size: 4em;
-    /* Lighter color for visibility on dark background */
     color: #444; 
     opacity: 0.7;
     line-height: 1;
 }
 
-/* Flexbox for multiple cards (remains the same) */
+      
 .testimonials-section .container {
     display: flex;
     flex-direction: column; 
@@ -447,13 +439,10 @@ footer a:hover {
 }
 
 
-/* =====================================
-   8. Contact & Hours Section
-   ===================================== */
 
 .contact-section {
     padding: 60px 0;
-    /* Main section background is the secondary dark background */
+   
     background-color: var(--light-bg); 
 }
 
@@ -462,11 +451,10 @@ footer a:hover {
     margin-bottom: 40px;
     font-family: var(--font-heading);
     font-size: 2.2em;
-    /* Headings are light */
     color: var(--text-color-light); 
 }
 
-/* Container for Hours and Form - Use CSS Grid for side-by-side layout */
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -474,9 +462,9 @@ footer a:hover {
     align-items: start; 
 }
 
-/* --- Hours of Operation Styling --- */
+
 .hours h4 {
-    /* Accent color for hours header */
+    
     color: var(--primary-color); 
     font-size: 1.5em;
     margin-bottom: 15px;
@@ -488,17 +476,17 @@ footer a:hover {
 }
 
 .hours li {
-    /* List item background is a lighter dark shade */
+    
     background-color: #383838; 
     padding: 10px 15px;
     margin-bottom: 8px;
     border-radius: var(--border-radius);
     font-size: 1.1em;
-    /* Text is light */
+   
     color: var(--text-color-light); 
 }
 
-/* --- Contact Form Styling --- */
+
 .contact-form-container h4 {
     color: var(--text-color-light);
     font-size: 1.5em;
@@ -516,21 +504,21 @@ footer a:hover {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    /* Input background is dark, text is light */
+   
     background-color: var(--dark-bg);
     border: 1px solid #444; 
     border-radius: var(--border-radius);
     font-size: 1em;
     font-family: var(--font-body);
-    color: var(--text-color-light); /* Input text color */
+    color: var(--text-color-light); 
     box-sizing: border-box; 
 }
 
-/* Placeholder text color adjustment for dark mode */
+
 .contact-form-container input::placeholder,
 .contact-form-container textarea::placeholder {
     color: var(--text-color-muted);
-    opacity: 1; /* For cross-browser compatibility */
+    opacity: 1; 
 }
 
 .contact-form-container textarea {
@@ -538,7 +526,7 @@ footer a:hover {
     min-height: 120px;
 }
 
-/* Button styling relies on the global .btn-primary */
+
 .contact-form-container .btn-primary {
     padding: 12px 20px;
     font-size: 1.1em;
@@ -548,7 +536,6 @@ footer a:hover {
 }
 
 
-/* --- Mobile Responsiveness (Stack columns) --- */
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
@@ -557,7 +544,6 @@ footer a:hover {
     .hours {
         margin-bottom: 40px;
         padding-bottom: 20px;
-        /* Darker dashed line for separation */
         border-bottom: 1px dashed #444; 
     }
 }
